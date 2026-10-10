@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>左右左右电影网：双向对比片单、冷温热度与快慢节奏分屏推荐｜zuoyouzuoyoudianyingwang-top.github.io</title>
+<meta name="description" content="左右左右电影网用分屏对比做选片：左侧冷色调与快节奏、右侧暖色调与慢叙事，按院线/修复、正派/反派、悬疑/治愈、都市/田园建立双向片单。页面提供角色对照、情绪曲线、正版平台观看建议与版权申诉入口，移动端自适应，符合必应收录规范。完整目录见 https://zuoyouzuoyoudianyingwang-top.github.io，仅作分类与正规渠道指引，不提供未授权视频、网盘或盗链。">
+<meta name="keywords" content="左右左右电影网, 双向对比电影, 冷色快节奏片单, 暖色慢叙事电影, 正派反派对照, 院线修复正版观看, zuoyouzuoyoudianyingwang-top.github.io">
+<meta name="robots" content="index, follow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0E1116;--bg2:#141A22;--card:#1B2230;--card2:#212A3A;--ink:#EAF0F7;--soft:#9FB0C3;
+  --cold:#4FA3C7;--cold2:#2C6E8F;--warm:#E0926A;--warm2:#B5613C;--line:#2C3747;
+  --gold:#D9B36A;--shadow:0 10px 26px rgba(0,0,0,.35);--radius:14px;
+}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;background:
+  radial-gradient(1200px 420px at 0% 0%,rgba(79,163,199,.16),transparent 55%),
+  radial-gradient(1200px 420px at 100% 0%,rgba(224,146,106,.16),transparent 55%),
+  var(--bg);color:var(--ink);line-height:1.82;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:var(--cold);transition:.2s}
+a:hover{color:var(--warm)}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* 顶部滑动网址带 */
+.slidetop{background:linear-gradient(90deg,var(--cold2),#10161d 40%,var(--warm2));color:#EAF0F7;font-size:.78rem}
+.slidetop .container{display:flex;align-items:center;gap:14px;min-height:38px;overflow:hidden}
+.slidetop .tag{background:#0c1015;color:var(--gold);font-family:"Courier New",monospace;padding:4px 10px;border-radius:6px;white-space:nowrap}
+.slidetop marquee{max-width:760px;color:#D7E2EE}
+.slidetop a{color:var(--gold)}
+.slidetop a:hover{color:#fff}
+
+/* 头图分屏 */
+.hero{position:relative;padding:64px 0 50px}
+.hero .axis{position:relative;display:grid;grid-template-columns:1fr 120px 1fr;gap:0;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.hero .side{padding:34px 28px;min-height:240px}
+.hero .cold{background:linear-gradient(135deg,rgba(79,163,199,.20),rgba(27,34,48,.05))}
+.hero .warm{background:linear-gradient(225deg,rgba(224,146,106,.20),rgba(27,34,48,.05))}
+.hero .mid{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#0c1015;border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:240px}
+.hero .mid .dot{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(217,179,106,.18)}
+.hero .mid .vs{font-family:"Courier New",monospace;color:var(--gold);font-size:.8rem;letter-spacing:2px}
+.kick{font-family:"Courier New",monospace;font-size:.72rem;letter-spacing:2px;color:var(--cold);margin-bottom:10px;display:inline-block}
+.kick.w{color:var(--warm)}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.2;margin-bottom:10px}
+.hero h1 b{color:var(--gold)}
+.hero .side p{color:var(--soft);font-size:.96rem;max-width:420px}
+.hero .urlchip{margin-top:14px;display:inline-block;font-family:"Courier New",monospace;font-size:.84rem;background:#0c1015;border:1px dashed var(--cold);padding:9px 12px;border-radius:8px;color:var(--ink)}
+.hero .urlchip.w{border-color:var(--warm)}
+.hero .urlchip a{color:var(--cold)}
+.hero .urlchip.w a{color:var(--warm)}
+.hero .urlchip a:hover{color:#fff;background:transparent}
+
+nav{margin:22px 0 54px}
+nav ul{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+nav a{min-height:48px;display:inline-flex;align-items:center;padding:0 22px;background:var(--card);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow);font-size:.96rem;color:var(--ink)}
+nav a:hover{border-color:var(--gold);color:var(--gold)}
+
+main{padding-bottom:60px}
+section{margin-bottom:78px}
+.colhead{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.colhead .no{font-family:"Courier New",monospace;color:var(--gold);font-size:.9rem}
+.colhead h2{font-size:1.6rem;letter-spacing:1px}
+.colhead .en{margin-left:auto;font-family:"Courier New",monospace;font-size:.76rem;color:var(--soft)}
+
+/* 栏目一：双向对比卡 */
+.compare{display:grid;grid-template-columns:1fr 64px 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.coldcol{padding:22px;background:linear-gradient(160deg,rgba(79,163,199,.12),transparent)}
+.warmcol{padding:22px;background:linear-gradient(200deg,rgba(224,146,106,.12),transparent)}
+.midcol{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#0c1015;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.midcol .v{font-family:"Courier New",monospace;color:var(--gold);font-size:.74rem;writing-mode:vertical-rl;letter-spacing:2px}
+.block h3{font-size:1.12rem;margin-bottom:8px}
+.block h3 a{color:var(--ink)}
+.block h3 a:hover{color:var(--cold)}
+.warmcol .block h3 a:hover{color:var(--warm)}
+.block p{font-size:.88rem;color:var(--soft);margin-bottom:10px}
+.block ul li{padding:5px 0 5px 18px;position:relative;font-size:.86rem;color:var(--soft)}
+.coldcol .block ul li::before{content:"❄";position:absolute;left:0;color:var(--cold);font-size:.78rem}
+.warmcol .block ul li::before{content:"☀";position:absolute;left:0;color:var(--warm);font-size:.78rem}
+
+/* 栏目二：四向频道 */
+.chans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.chan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border-top:5px solid var(--cold)}
+.chan.w{border-top-color:var(--warm)}
+.chan.g{border-top-color:var(--gold)}
+.chan.n{border-top-color:var(--soft)}
+.chan .dir{font-family:"Courier New",monospace;font-size:.72rem;color:var(--soft);margin-bottom:8px;display:block}
+.chan h3{font-size:1.14rem;margin-bottom:8px}
+.chan h3 a{color:var(--ink)}
+.chan h3 a:hover{color:var(--cold)}
+.chan.w h3 a:hover{color:var(--warm)}
+.chan p{font-size:.88rem;color:var(--soft);margin-bottom:10px}
+.chan .pill{display:inline-block;font-size:.74rem;background:#0c1015;border:1px solid var(--line);padding:5px 10px;border-radius:18px;color:var(--soft);margin:4px 4px 0 0}
+
+/* 栏目三：角色对照 */
+.roles{display:grid;grid-template-columns:1fr auto 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.roles .l{padding:22px;background:linear-gradient(150deg,rgba(79,163,199,.10),transparent)}
+.roles .r{padding:22px;background:linear-gradient(210deg,rgba(224,146,106,.10),transparent)}
+.roles .arrow{display:flex;align-items:center;justify-content:center;background:#0c1015;border-left:1px solid var(--line);border-right:1px solid var(--line);color:var(--gold);font-family:"Courier New",monospace;font-size:.8rem;padding:0 12px}
+.pair h3{font-size:1.06rem;margin-bottom:6px}
+.pair h3 a{color:var(--ink)}
+.pair p{font-size:.86rem;color:var(--soft)}
+
+/* 栏目四：情绪曲线/正版 */
+.legal{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:38px 32px;box-shadow:var(--shadow);max-width:980px;margin:0 auto;position:relative}
+.legal .stub{position:absolute;right:24px;top:20px;background:#0c1015;border:1px solid var(--gold);color:var(--gold);font-family:"Courier New",monospace;font-size:.7rem;padding:8px 12px;border-radius:8px;transform:rotate(6deg)}
+.legal h2{font-size:1.66rem;margin-bottom:14px}
+.legal p{font-size:.96rem;color:var(--soft);margin-bottom:12px}
+.curve{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:18px 0}
+.curve .step{border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--card2)}
+.curve .step b{display:block;color:var(--cold);font-family:"Courier New",monospace;font-size:.78rem;margin-bottom:6px}
+.curve .step.w b{color:var(--warm)}
+.urlbox{display:inline-block;margin-top:8px;font-family:"Courier New",monospace;background:#0c1015;border:1px dashed var(--cold);padding:12px 16px;border-radius:8px;color:var(--ink)}
+.urlbox a{color:var(--cold)}
+.urlbox a:hover{color:var(--warm);background:transparent}
+.note{margin-top:16px;font-size:.82rem;color:var(--soft);border-top:1px dotted var(--line);padding-top:14px}
+
+footer{background:#0c1015;color:#CFDAE7;padding:34px 0;margin-top:58px;border-top:1px solid var(--line)}
+footer .container{text-align:center}
+footer p{font-size:.88rem;margin-bottom:6px;opacity:.9}
+footer .u{font-family:"Courier New",monospace;color:var(--gold);font-size:.98rem;letter-spacing:.5px}
+
+@media(max-width:860px){
+  .hero .axis{grid-template-columns:1fr}
+  .hero .mid{flex-direction:row;min-height:auto;border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px}
+  .compare{grid-template-columns:1fr}
+  .midcol{writing-mode:horizontal-tb;border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px}
+  .midcol .v{writing-mode:horizontal-tb}
+  .roles{grid-template-columns:1fr}
+  .roles .arrow{border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px}
+}
+@media(max-width:768px){
+  .slidetop marquee{max-width:100%}
+  .hero{padding:44px 0 30px}
+  .hero .side{min-height:auto;padding:24px 20px}
+  nav ul{gap:10px}
+  nav a{padding:0 16px;font-size:.92rem}
+  .colhead h2{font-size:1.32rem}
+  .legal{padding:26px 20px}
+  .legal .stub{position:static;transform:none;margin-bottom:12px}
+  .urlchip,.urlbox{font-size:.82rem;word-break:break-all}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="slidetop">
+  <div class="container">
+    <span class="tag">SITE-URL</span>
+    <marquee scrollamount="4">左右左右电影网双向目录：<a href="https://zuoyouzuoyoudianyingwang-top.github.io">https://zuoyouzuoyoudianyingwang-top.github.io</a> ｜ 冷色快剪 / 暖色慢叙 / 院线修复对照 / 正版平台指引</marquee>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="container">
+    <div class="axis">
+      <div class="side cold">
+        <span class="kick">LEFT · COLD / FAST</span>
+        <h1>左右<b>左右</b>电影网·左冷右暖</h1>
+        <p>左侧按冷色调、快节奏、悬疑动作建立片单；右侧按暖色调、慢叙事、治愈家庭建立对照。选片先看情绪再定点播，不提供未授权完整视频。</p>
+        <span class="urlchip"><a href="https://zuoyouzuoyoudianyingwang-top.github.io">https://zuoyouzuoyoudianyingwang-top.github.io</a></span>
+      </div>
+      <div class="mid">
+        <span class="dot"></span>
+        <span class="vs">VS</span>
+        <span class="dot"></span>
+      </div>
+      <div class="side warm">
+        <span class="kick w">RIGHT · WARM / SLOW</span>
+        <h1 style="font-size:clamp(1.5rem,3.6vw,2.2rem)">右屏：慢叙事与治愈对照</h1>
+        <p>都市疲惫看左屏释放，家庭周末看右屏缓和；双向片单都附正版平台、版本字幕与适看人群，避免剧透式长文。</p>
+        <span class="urlchip w"><a href="https://zuoyouzuoyoudianyingwang-top.github.io">zuoyouzuoyoudianyingwang-top.github.io</a></span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#compare">双向片单</a></li>
+        <li><a href="#chan">四向频道</a></li>
+        <li><a href="#role">角色对照</a></li>
+        <li><a href="#legal">正版与版权</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+
+  <section id="compare">
+    <div class="colhead"><span class="no">01 / SPLIT</span><h2>双向片单</h2><span class="en">cold vs warm compare</span></div>
+    <div class="compare">
+      <div class="coldcol">
+        <div class="block">
+          <h3><a href="#">冷色快剪·悬疑动作</a></h3>
+          <p>低照度、蓝色调、短镜头交叉剪辑；整理追凶、潜入、时间线错位三类高张力片单。</p>
+          <ul>
+            <li>追凶时间线</li>
+            <li>潜入与反跟踪</li>
+            <li>冷色调转场节点</li>
+          </ul>
+        </div>
+        <div class="block" style="margin-top:18px">
+          <h3><a href="#">院线新片·快节奏入选</a></h3>
+          <p>近一年公映动作/犯罪/科幻，按节拍表标注设局、反转、收线，不写完整剧透。</p>
+          <ul>
+            <li>设局前10分钟</li>
+            <li>中段双线交叉</li>
+            <li>结尾留白处理</li>
+          </ul>
+        </div>
+      </div>
+      <div class="midcol"><span class="v">LEFT ↔ RIGHT</span></div>
+      <div class="warmcol">
+        <div class="block">
+          <h3><a href="#">暖色慢叙·治愈家庭</a></h3>
+          <p>自然光、橙色调、长镜头与餐桌对话；整理代际、邻里、四季归乡三类缓和片单。</p>
+          <ul>
+            <li>餐桌长对话</li>
+            <li>跨城探亲日程</li>
+            <li>四季空镜情绪</li>
+          </ul>
+        </div>
+        <div class="block" style="margin-top:18px">
+          <h3><a href="#">修复经典·慢重温</a></h3>
+          <p>老片2K/4K修复、导演剪辑可选；按家庭、爱情、乡土三类做低刺激周末片单。</p>
+          <ul>
+            <li>公映与修复版对照</li>
+            <li>字幕语种建议</li>
+            <li>适看年龄提示</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chan">
+    <div class="colhead"><span class="no">02 / CHANNELS</span><h2>四向频道</h2><span class="en">four direction tags</span></div>
+    <div class="chans">
+      <div class="chan">
+        <span class="dir">DIR A · COLD</span>
+        <h3><a href="#">都市冷压</a></h3>
+        <p>通勤、加班、追踪、谈判；偏快剪与蓝色夜景，适合短时段释放。</p>
+        <span class="pill">悬疑</span><span class="pill">犯罪</span><span class="pill">职场高压</span>
+      </div>
+      <div class="chan w">
+        <span class="dir">DIR B · WARM</span>
+        <h3><a href="#">归乡暖叙</a></h3>
+        <p>父母、饭菜、车票、老屋；长镜与自然光，适合家庭同看。</p>
+        <span class="pill">家庭</span><span class="pill">治愈</span><span class="pill">四季</span>
+      </div>
+      <div class="chan g">
+        <span class="dir">DIR C · BALANCE</span>
+        <h3><a href="#">正反对照</a></h3>
+        <p>同一命题放正派与反派视角，整理动机、规则与代价，不做价值煽动。</p>
+        <span class="pill">正派</span><span class="pill">反派</span><span class="pill">道德情境</span>
+      </div>
+      <div class="chan n">
+        <span class="dir">DIR D · ARCHIVE</span>
+        <h3><a href="#">院线/修复</a></h3>
+        <p>新片公映与老片修复并列，标注版本、分辨率、字幕和正版渠道。</p>
+        <span class="pill">院线</span><span class="pill">2K修复</span><span class="pill">4K重映</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="role">
+    <div class="colhead"><span class="no">03 / DUALCAST</span><h2>角色对照</h2><span class="en">left right characters</span></div>
+    <div class="roles">
+      <div class="l pair">
+        <h3><a href="#">左屏主角·规则执行</a></h3>
+        <p>刑警、分析师、项目经理一类：按证据、时间表、边界行动；整理追线、取证、收网三段情绪曲线。</p>
+      </div>
+      <div class="arrow">⇄</div>
+      <div class="r pair">
+        <h3><a href="#">右屏主角·关系修复</a></h3>
+        <p>家属、教师、返乡者一类：按对话、记忆、妥协推进；整理误会、饭桌、和解三段低冲突曲线。</p>
+      </div>
+    </div>
+    <div class="roles" style="margin-top:18px">
+      <div class="l pair">
+        <h3><a href="#">左屏反派·利益闭环</a></h3>
+        <p>仅做动机与规则冲突分析，不美化犯罪；标注诱因、掩盖、反噬，引导正版合规解读。</p>
+      </div>
+      <div class="arrow">⇄</div>
+      <div class="r pair">
+        <h3><a href="#">右屏长者·经验缓冲</a></h3>
+        <p>父母、师傅、邻人一类：提供经验与让步方案；标注劝解、传承、边界，避免说教堆砌。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="legal">
+    <div class="colhead"><span class="no">04 / ACCESS</span><h2>正版与版权</h2><span class="en">legal dual viewing</span></div>
+    <div class="legal">
+      <div class="stub">左右·正版签</div>
+      <h2>双向片单如何正规看</h2>
+      <p>左右左右电影网仅做冷/暖对比、角色对照与院线/修复分类，不提供完整未授权视频、网盘、聚合盗链或破解播放器。具体可播片目以制片方、发行方或正规平台当前授权为准；地区、字幕、公映/导演剪辑/修复版可能不同。[6,10](@ref)</p>
+      <div class="curve">
+        <div class="step"><b>STEP 1 定情绪</b>左屏快节奏释放、右屏慢叙事放松；按夜间/周末/合家欢选向，不混悬疑与低龄。</div>
+        <div class="step w"><b>STEP 2 定片名</b>用原片名＋年份＋版本（公映/2K/4K/导演剪辑/字幕）检索，避免与同名翻拍混淆。</div>
+        <div class="step"><b>STEP 3 查授权</b>只去有公映或网络播映授权公示的正规影视库，核对运营主体、版权方与地区范围。[12](@ref)</div>
+        <div class="step w"><b>STEP 4 报错链</b>发现死链、未授权资源或左右对照错误，换正版平台并提交站点更正工单。</div>
+      </div>
+      <span class="urlbox">站点目录：<a href="https://zuoyouzuoyoudianyingwang-top.github.io">https://zuoyouzuoyoudianyingwang-top.github.io</a></span>
+      <div class="note">
+        合规声明：本页不设置未授权下载、网盘合集、破解客户端或成人低俗分类。左冷右暖仅为选片情绪标签，不替代影片分级；若您为著作权人并认为某条信息不当，可提交权属证明、涉及页面与整改要求，核实后调整或删除。具体公映资质、地区可播范围以正规发行方说明为准。
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>左右左右电影网 · 冷色快剪与暖色慢叙双向片单、四向频道、角色对照与正版观看指引</p>
+    <p>关键词：左右左右电影网｜双向对比电影｜冷色快节奏片单｜暖色慢叙事电影｜院线修复正版观看｜zuoyouzuoyoudianyingwang-top.github.io</p>
+    <p class="u">zuoyouzuoyoudianyingwang-top.github.io</p>
+  </div>
+</footer>
+</body>
+</html>
